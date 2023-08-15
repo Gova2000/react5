@@ -8,12 +8,13 @@ class EvenOddApp extends Component {
   state = {count: 0}
 
   change = () => {
-    this.setState(pre => ({count: pre.count + rand()}))
+    this.setState(pre => ({count: pre.count + Math.ceil(Math.random() * 100)}))
   }
 
   render() {
     const {count} = this.state
-    const text = count % 2 === 0 ? 'Even' : 'Odd'
+    const cond1=count%2===0
+    const text = {cond1 ? 'Even' : 'Odd'}
     return (
       <div className="card">
         <h1>
