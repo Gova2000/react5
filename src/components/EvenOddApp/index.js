@@ -14,7 +14,7 @@ class EvenOddApp extends Component {
   render() {
     const {count} = this.state
     const cond1=count%2===0
-    const text = {cond1 ? 'Even' : 'Odd'}
+    const text = cond1 ? 'Even' : 'Odd'
     return (
       <div className="card">
         <h1>
